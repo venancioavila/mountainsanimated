@@ -8,19 +8,16 @@
  * @format
  */
 
-import React, {AnimationEvent, useRef} from 'react';
+import React, {useRef} from 'react';
 import {
   SafeAreaView,
-  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
   View,
-  Image,
   Dimensions,
   Animated,
 } from 'react-native';
-import {number} from 'yargs';
 
 import {TEXT} from './constants';
 
