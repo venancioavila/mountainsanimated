@@ -78,13 +78,18 @@ const App = () => {
   const scrollY = useRef(new Animated.Value(0)).current;
 
   const opacity = scrollY.interpolate({
-    inputRange: [0, 200],
+    inputRange: [0, 600],
     outputRange: [1, 0],
   });
 
   const translateY = scrollY.interpolate({
     inputRange: [0, 600],
-    outputRange: [0, 1200],
+    outputRange: [0, 1000],
+  });
+
+  const translateX = scrollY.interpolate({
+    inputRange: [0, 600],
+    outputRange: [0, 500],
   });
 
   const backgroundColor = scrollY.interpolate({
@@ -114,7 +119,10 @@ const App = () => {
         )}>
         <Animated.View style={[styles.header, {backgroundColor}]}>
           <Animated.Image
-            style={[styles.sun, {opacity, transform: [{translateY}]}]}
+            style={[
+              styles.sun,
+              {opacity, transform: [{translateY}, {translateX}]},
+            ]}
             resizeMode="contain"
             source={require('./assets/sun.png')}
           />
