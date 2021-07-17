@@ -92,12 +92,6 @@ const App = () => {
     outputRange: [0, 500],
   });
 
-  const backgroundColor = scrollY.interpolate({
-    inputRange: [0, 150, 300],
-    outputRange: ['orange', '#F95742', '#181669'],
-    extrapolate: 'clamp',
-  });
-
   return (
     <SafeAreaView>
       <StatusBar backgroundColor="orange" />
@@ -115,9 +109,9 @@ const App = () => {
               },
             },
           ],
-          {useNativeDriver: false},
+          {useNativeDriver: true},
         )}>
-        <Animated.View style={[styles.header, {backgroundColor}]}>
+        <Animated.View style={[styles.header]}>
           <Animated.Image
             style={[
               styles.sun,
