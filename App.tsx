@@ -129,7 +129,7 @@ const App = () => {
         </Animated.View>
         <View style={styles.content}>
           <View>
-            <Text style={styles.title}>Montains</Text>
+            <Text style={styles.title}>Mountains</Text>
           </View>
           <View>
             <Text style={styles.text}>{TEXT}</Text>
